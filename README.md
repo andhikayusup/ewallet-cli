@@ -70,11 +70,23 @@ Make sure your virtual environment is activated, then run:
 python main.py
 ```
 
-## Running Tests
+## Development
+
+### Running Tests
 With virtual environment activated:
 ```bash
 python -m unittest discover tests
 ```
+
+### Continuous Integration
+The project uses GitHub Actions for continuous integration. Tests are automatically run in the following scenarios:
+- On every push to any branch
+- On every pull request to any branch
+- Tests are executed on multiple Python versions (3.8, 3.9, 3.10, 3.11)
+- All dependencies are automatically installed
+- Test results are reported in the GitHub Actions interface
+
+You can view the test results in the "Actions" tab of the GitHub repository.
 
 ## Example Usage
 ```bash
