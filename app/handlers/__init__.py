@@ -5,5 +5,6 @@ from . import help
 from . import exit
 from . import register
 from . import login
+from . import balance
 
-__all__ = ['hello', 'help', 'exit', 'register', 'login'] 
+__all__ = ['hello', 'help', 'exit', 'register', 'login', 'balance'] 
