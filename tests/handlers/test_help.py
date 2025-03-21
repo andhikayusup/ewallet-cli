@@ -25,10 +25,11 @@ class TestHelpHandler(unittest.TestCase):
         """Test the help command displays available commands."""
         # Setup mock commands
         self.cli.commands = {
-            'hello': {'description': 'Say hello'}
+            'hello': {'description': 'Say hello'},
+            'help': {'description': 'Show help message'}
         }
         
-        expected_output = "\nAvailable commands:\n  hello      - Say hello\n\n"
+        expected_output = "\nAvailable commands:\n  hello      - Say hello\n  help       - Show help message\n\n"
         
         cmd_help(self.cli)
         actual_output = self.held_output.getvalue()

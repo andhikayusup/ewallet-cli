@@ -24,12 +24,17 @@ class TestExitHandler(unittest.TestCase):
 
     def test_cmd_exit(self):
         """Test the exit command stops the CLI."""
+        expected_output = "Goodbye!"
 
         # Verify CLI is running before exit
         self.assertTrue(self.cli.running)
         
         # Execute exit command
         cmd_exit(self.cli)
+        
+        # Verify the output message
+        actual_output = self.held_output.getvalue().strip()
+        self.assertEqual(actual_output, expected_output)
         
         # Verify CLI is no longer running
         self.assertFalse(self.cli.running)
