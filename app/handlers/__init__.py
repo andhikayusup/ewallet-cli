@@ -7,5 +7,6 @@ from . import register
 from . import login
 from . import balance
 from . import topup
+from . import logout
 
-__all__ = ['hello', 'help', 'exit', 'register', 'login', 'balance', 'topup'] 
+__all__ = ['hello', 'help', 'exit', 'register', 'login', 'balance', 'topup', 'logout'] 
