@@ -46,6 +46,7 @@ class TestBalanceHandler(unittest.TestCase):
         output = self.held_output.getvalue()
         
         # Then
+        
         self.assertIn(f"Current balance for user '{self.test_user.name}': Rp0.00", output)
     
     def test_balance_check_when_not_logged_in(self):

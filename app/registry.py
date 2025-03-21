@@ -1,6 +1,6 @@
 """Centralized command registry."""
 
-from .handlers import hello, help, exit, register, login, balance
+from .handlers import hello, help, exit, register, login, balance, topup
 
 class CommandRegistry:
     """Central registry for all CLI commands."""
@@ -36,6 +36,11 @@ class CommandRegistry:
             "balance",
             lambda: balance.cmd_balance(cli),
             "Check your wallet balance"
+        )
+        cli.register_command(
+            "topup",
+            lambda: topup.cmd_topup(cli),
+            "Add money to your wallet (usage: topup <amount>)"
         )
         cli.register_command(
             "exit",
