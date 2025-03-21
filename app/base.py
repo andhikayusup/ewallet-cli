@@ -6,6 +6,7 @@ from shlex import split
 from .registry import CommandRegistry
 from .utils import println
 from .repositories.user_repository import UserRepository, InMemoryUserRepository
+from .repositories.session_repository import SessionRepository, InMemorySessionRepository
 
 class CLI:
     def __init__(self):
@@ -15,6 +16,7 @@ class CLI:
         
         # Initialize repositories
         self.user_repository: UserRepository = InMemoryUserRepository()
+        self.session_repository: SessionRepository = InMemorySessionRepository()
         
         # Register all commands using the central registry
         CommandRegistry.register_all(self)
